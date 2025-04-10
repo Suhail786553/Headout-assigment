@@ -127,17 +127,17 @@ export default function Recommendations() {
             `}</style>
 
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl sm:text-2xl font-semibold text-black">Headout’s top recommendations</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-600">Headout’s top recommendations</h2>
                 <div className="flex space-x-2 sm:hidden">
                     <button
                         onClick={() => scroll('left')}
-                        className="p-2 bg-white shadow rounded-full"
+                        className="p-2 bg-white shadow rounded-full hidden md:block"
                     >
                         <IoIosArrowBack className="text-black text-sm" />
                     </button>
                     <button
                         onClick={() => scroll('right')}
-                        className="p-2 bg-white shadow rounded-full"
+                        className="p-2 bg-white shadow rounded-full hidden md:block"
                     >
                         <IoIosArrowForward className="text-black text-sm" />
                     </button>

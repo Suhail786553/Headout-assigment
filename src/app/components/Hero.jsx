@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 export default function Hero() {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Added state
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 0);
@@ -13,7 +12,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-[90vh] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -30,7 +29,7 @@ export default function Hero() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-opacity-30 z-10" />
+      <div className="absolute inset-0  bg-opacity-30 z-10" />
 
       {/* Navbar */}
       <div
@@ -39,7 +38,7 @@ export default function Hero() {
         }`}
       >
         {/* Logo */}
-        <div className="flex items-center gap-2 w-24 md:w-32">
+        <div className="w-24 md:w-32">
           <Image
             src="https://cdn-imgix-open.headout.com/logo/svg/Headout_logo_purps.svg?w=229.5&h=36&fm=svg"
             alt="logo"
@@ -49,56 +48,29 @@ export default function Hero() {
           />
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6 text-sm">
-          <span className="cursor-pointer">English / INR</span>
-          <span className="flex items-center gap-1 cursor-pointer">
-            <span>❓</span> Help
-          </span>
-          <button className="px-5 py-1 border rounded-full hover:bg-black hover:text-white transition duration-200">
+        {/* Navigation */}
+        <div className="flex items-center gap-4 text-sm">
+          <button title="Search" className="text-lg ">🔍</button>
+          <button title="Language" className="flex items-center gap-1">🌐 <span className=" sm:inline">EN ₹INR</span></button>
+          <button className=" hidden md:block px-3 py-1 md:px-4 md:py-2 border rounded-lg hover:bg-black hover:text-white transition duration-200 text-xs md:text-sm ">
             Sign in
-          </button>
-        </div>
-
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-2xl focus:outline-none"
-          >
-            ☰
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="fixed top-16 left-0 w-full bg-white text-black z-30 shadow-lg md:hidden">
-          <div className="flex flex-col items-center gap-4 py-4">
-            <span className="cursor-pointer">English / INR</span>
-            <span className="flex items-center gap-1 cursor-pointer">
-              <span>❓</span> Help
-            </span>
-            <button className="px-5 py-1 border rounded-full hover:bg-black hover:text-white transition duration-200">
-              Sign in
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* Hero Content */}
-      <div className="relative z-20 flex flex-col items-start justify-start h-full pt-80 px-4 md:px-32 text-white">
-        <h1 className="text-4xl md:text-5xl font-bold max-w-3xl mb-6 leading-tight">
+      <div className="relative z-20 flex flex-col items-start justify-start h-full pt-70 md:pt-90 px-4 md:px-32 text-white">
+        <h1 className="text-2xl md:text-5xl font-bold max-w-2xl mb-6 leading-tight">
           The world's best experiences <br /> curated just for you
         </h1>
-        <div className="w-1/3 max-w-xl">
+        <div className="w-full md:w-1/2 max-w-xl md:max-w-md">
           <div className="flex items-center bg-white rounded-xl p-2 shadow-md">
             <input
               type="text"
               placeholder="Search for experiences and cities"
-              className="flex-grow px-2 py-2 text-black rounded-xl outline-none"
+              className="flex-grow px-2 py-2 text-black rounded-xl outline-none text-sm md:text-base"
             />
-            <button className="p-2 pr-4 text-gray-600">🔍</button>
+            <button className="p-2 pr-4 text-gray-600 text-xl">🔍</button>
           </div>
         </div>
       </div>

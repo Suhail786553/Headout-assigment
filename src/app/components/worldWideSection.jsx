@@ -38,15 +38,15 @@ export default function worldWideSection() {
     return (
         <section className="px-4 md:px-12 py-10 bg-[#f8f8f8] lg:pl-32 lg:pr-32 pb-4 pt-4">
             <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-semibold text-black mt-4">Top things to do worldwide
+                <h2 className="text-xl md:text-2xl  font-semibold text-gray-600 mt-4">Top things to do worldwide
                 </h2>
-                <div className="flex items-center gap-4 text-sm text-blue-600">
-                    <a href="#" className="underline">See all</a>
+                <div className="flex items-center gap-4 text-sm text-gray-600">
+                    <a href="#" className="whitespace-nowrap">See all</a>
                     <button
                         onClick={() => scroll('left')}
                         className="p-2 bg-white shadow rounded-full"
                     >
-                        <IoIosArrowBack className="text-black" />
+                        <IoIosArrowBack className="text-black hidden md:block" />
                     </button>
                     <button
                         onClick={() => scroll('right')}
@@ -58,9 +58,9 @@ export default function worldWideSection() {
             </div>
 
             {/* Destination Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-6 md:gap-6">
                 {destinations.map((item, idx) => (
-                    <div key={idx} className="rounded-lg overflow-hidden  cursor-pointer shadow-sm hover:shadow-lg transition duration-300 transform hover:-translate-y-1 group">
+                    <div key={idx} className="min-w-[220px] md:min-w-0 rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition duration-300 transform hover:-translate-y-1 group flex-shrink-0">
                         <Image
                             src={item.img}
                             alt={item.title}
