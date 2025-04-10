@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* ग्लोबल CSS में जोड़ें */
+@media (max-width: 768px) {
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .mobile-menu.open {
+    max-height: 300px;
+  }
+}
