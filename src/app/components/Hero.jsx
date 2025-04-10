@@ -91,12 +91,12 @@ export default function Hero() {
         <h1 className="text-4xl md:text-5xl font-bold max-w-3xl mb-6 leading-tight">
           The world's best experiences <br /> curated just for you
         </h1>
-        <div className="w-full max-w-xl">
-          <div className="flex items-center bg-white rounded-full p-2 shadow-md">
+        <div className="w-1/3 max-w-xl">
+          <div className="flex items-center bg-white rounded-xl p-2 shadow-md">
             <input
               type="text"
               placeholder="Search for experiences and cities"
-              className="flex-grow px-4 py-2 text-black rounded-l-full outline-none"
+              className="flex-grow px-2 py-2 text-black rounded-xl outline-none"
             />
             <button className="p-2 pr-4 text-gray-600">🔍</button>
           </div>
