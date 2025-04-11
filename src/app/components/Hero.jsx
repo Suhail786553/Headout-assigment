@@ -12,7 +12,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[90vh] overflow-hidden">
+    <section className="relative w-full h-[70vh] md:h-[90vh] overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
