@@ -1,14 +1,14 @@
 export default function Footer() {
     return (
-        <footer className="bg-white text-gray-700 px-6 py-10">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <footer className="bg-white text-gray-700 px-6 py-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
-                {/* Logo & Help Section */}
-                <div>
-                    <div className="flex items-center gap-2 mb-4">
-                        <img src="https://cdn-imgix-open.headout.com/logo/svg/Headout_logo_purps.svg?w=229.5&h=36&fm=svg&crop=faces&auto=compress%2Cformat&fit=min" alt="Headout Logo" className="h-6" />
-                        <span className="text-xl font-semibold text-purple-600"></span>
-                    </div>
+          {/* Logo & Help Section - spans full width on mobile */}
+          <div className="col-span-2 sm:col-span-1 md:col-span-1">
+              <div className="flex items-center gap-2 mb-4">
+                  <img src="https://cdn-imgix-open.headout.com/logo/svg/Headout_logo_purps.svg?w=229.5&h=36&fm=svg&crop=faces&auto=compress%2Cformat&fit=min" alt="Headout Logo" className="h-6" />
+                  <span className="text-xl font-semibold text-purple-600"></span>
+              </div>
                     <p className="text-sm font-semibold">GET HELP 24/7</p>
                     <ul className="space-y-2 mt-2 text-sm">
                         <li className="flex items-center gap-2"><span>🛈</span> Help center</li>
@@ -50,7 +50,7 @@ export default function Footer() {
                 </div>
 
                 {/* Partners + Payment Icons */}
-                <div>
+                <div className="col-span-2 sm:col-span-1 md:col-span-1">
                     <p className="text-sm font-semibold mb-3">PARTNERS</p>
                     <ul className="space-y-2 text-sm">
                         <li>Experience providers</li>

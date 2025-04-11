@@ -94,19 +94,19 @@ const TestimonialSection = () => {
       <div className="flex flex-col lg:flex-row justify-center gap-8">
         {/* Left Content */}
         <div className="flex-1 flex flex-col justify-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight text-center lg:text-left lg:pl-28">
-            Millions<br />love heading out<br />with us <span>💖</span>
+          <h2 className="text-2xl lg:text-5xl font-bold mb-6 leading-tight text-left lg:text-left lg:pl-28">
+            Millions love <br /> heading  out with us <span>💖</span>
           </h2>
           <div className="flex gap-4 justify-center lg:justify-start lg:pl-28">
             <button
               onClick={() => scroll("left")}
-              className="bg-[#2c153a] p-3 rounded-full"
+              className="bg-[#2c153a] p-3 rounded-full hidden cursor-pointer  md:block"
             >
               <IoIosArrowBack size={24} />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="bg-[#2c153a] p-3 rounded-full"
+              className="bg-[#2c153a] p-3 rounded-full cursor-pointer hidden md:block"
             >
               <IoIosArrowForward size={24} />
             </button>

@@ -36,60 +36,62 @@ const TrustSection = () => {
   );
 
   return (
-    <section className="w-full bg-white py-12 px-4">
-      <div className="max-w-7xl mx-auto text-start">
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-12">
-          We've served <span className="font-bold">36 million+</span> guests and we are here for you
-        </h2>
+    <section className="w-full bg-white py-10 px-4">
+  <div className="max-w-7xl mx-auto text-center md:text-left">
+    <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
+      We've served <span className="font-bold">36 million+</span> guests and we are here for you
+    </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 items-start justify-center text-left">
-          {/* Trustpilot */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <TrustpilotLogo />
-            <div className="flex gap-1 mb-1">
-              {[...Array(4)].map((_, i) => (
-                <FullStar key={i} />
-              ))}
-              <HalfStar />
-            </div>
-            <p className="text-sm text-gray-700">
-              TrustScore <strong>4.3</strong> | <strong>37,023</strong> reviews
-            </p>
-            <p className="text-sm text-gray-500 mt-1">
-              Real reviews of real experiences. Trusted by explorers everywhere.
-            </p>
-          </div>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+  {/* Item 1 */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+    <TrustpilotLogo />
+    <div className="flex gap-1 mb-1">
+      {[...Array(4)].map((_, i) => (
+        <FullStar key={i} />
+      ))}
+      <HalfStar />
+    </div>
+    <p className="text-sm text-gray-700">
+      TrustScore <strong>4.3</strong> | <strong>37,023</strong> reviews
+    </p>
+    <p className="text-sm text-gray-500 mt-1">
+      Real reviews of real experiences. Trusted by explorers everywhere.
+    </p>
+  </div>
 
-          {/* 36 million+ */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="text-3xl mb-2">😘</div>
-            <h3 className="text-lg font-semibold text-black">36 million+</h3>
-            <p className="text-sm text-gray-600">Happy customers across 10,000+ experiences</p>
-          </div>
+  {/* Item 2 */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+    <div className="text-4xl mb-2">😘</div>
+    <h3 className="text-lg font-semibold text-black">36 million+</h3>
+    <p className="text-sm text-gray-600">Happy customers across 10,000+ experiences</p>
+  </div>
 
-          {/* Media */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex gap-3 mb-2">
-              <TechCrunchLogo />
-              <AppleLogo />
-            </div>
-            <h3 className="text-lg font-semibold text-black">In the media</h3>
-            <p className="text-sm text-gray-600">
-              Featured and recommended by the best brands
-            </p>
-          </div>
+  {/* Item 3 */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+    <div className="flex gap-3 mb-2">
+      <TechCrunchLogo />
+      <AppleLogo />
+    </div>
+    <h3 className="text-lg font-semibold text-black">In the media</h3>
+    <p className="text-sm text-gray-600">
+      Featured and recommended by the best brands
+    </p>
+  </div>
 
-          {/* Help Center */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="text-3xl mb-2">🎧</div>
-            <h3 className="text-lg font-semibold text-black">24 x 7 help center</h3>
-            <p className="text-sm text-gray-600">
-              Have a question? Live chat with local experts anywhere, anytime
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  {/* Item 4 */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+    <div className="text-4xl mb-2">🎧</div>
+    <h3 className="text-lg font-semibold text-black">24 x 7 help center</h3>
+    <p className="text-sm text-gray-600">
+      Have a question? Live chat with local experts anywhere, anytime
+    </p>
+  </div>
+</div>
+
+  </div>
+</section>
+
   );
 };
 

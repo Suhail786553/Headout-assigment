@@ -95,10 +95,10 @@ export default function FeaturesAndDestinations() {
         <IoIosArrowForward className="text-black" />
       </button>
     </div>
-  </div>
+  </div>   
 
   {/* Destination Cards - Scrollable on mobile */}
-  <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-6 md:gap-6">
+  <div className="flex gap-4 scrollbar-hide overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-6 md:gap-6">
     {destinations.map((item, idx) => (
       <div
         key={idx}

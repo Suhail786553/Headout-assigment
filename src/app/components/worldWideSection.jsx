@@ -44,9 +44,9 @@ export default function worldWideSection() {
                     <a href="#" className="whitespace-nowrap">See all</a>
                     <button
                         onClick={() => scroll('left')}
-                        className="p-2 bg-white shadow rounded-full"
+                        className="p-2 bg-white shadow rounded-full hidden md:block"
                     >
-                        <IoIosArrowBack className="text-black hidden md:block" />
+                        <IoIosArrowBack className="text-black" />
                     </button>
                     <button
                         onClick={() => scroll('right')}
