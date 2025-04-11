@@ -37,6 +37,15 @@ const destinations = [
 export default function worldWideSection() {
     return (
         <section className="px-4 md:px-12 py-10 bg-[#f8f8f8] lg:pl-32 lg:pr-32 pb-4 pt-4">
+            <style jsx global>{`
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    `}</style>
             <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl md:text-2xl  font-semibold text-gray-600 mt-4">Top things to do worldwide
                 </h2>
@@ -58,7 +67,7 @@ export default function worldWideSection() {
             </div>
 
             {/* Destination Cards */}
-            <div className="flex gap-4 overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-6 md:gap-6">
+            <div className="flex gap-4 hide-scrollbar overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-6 md:gap-6">
                 {destinations.map((item, idx) => (
                     <div key={idx} className="min-w-[220px] md:min-w-0 rounded-lg overflow-hidden cursor-pointer shadow-sm hover:shadow-lg transition duration-300 transform hover:-translate-y-1 group flex-shrink-0">
                         <Image

@@ -77,7 +77,7 @@ export default function Hero() {
       )}
 
       {/* Hero Content */}
-      {!scrolled && (
+      
         <div className="relative z-20 flex flex-col items-start justify-center h-full pt-32 px-4 md:px-32 text-white">
           <h1 className="text-2xl md:text-5xl font-bold max-w-2xl mb-6 leading-tight">
             The world's best experiences <br /> curated just for you
@@ -93,7 +93,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-      )}
     </section>
   );
 }

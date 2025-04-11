@@ -36,6 +36,15 @@ const PartnersSection = () => {
   };
   return (
     <div className="w-full bg-white py-12">
+      <style jsx global>{`
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    `}</style>
       <h2 className="text-left lg:text-left pl-4 lg:pl-32 text-xl lg:text-3xl font-bold text-gray-800 mb-8">
         We have the best partners
       </h2>
@@ -71,7 +80,7 @@ const PartnersSection = () => {
       <div className="relative">
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto space-x-6 pb-2 pr-10 scrollbar-hide"
+          className="flex overflow-x-auto space-x-6 pb-2 pr-10 hide-scrollbar"
         >
           {themes.map((theme, index) => (
             <button
@@ -89,7 +98,7 @@ const PartnersSection = () => {
         </div>
 
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white border rounded-full p-1 shadow"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white border rounded-full p-1 shadow hidden md:block"
           onClick={scrollRight}
         >
           <ChevronRight size={20} />
