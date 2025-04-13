@@ -131,7 +131,7 @@ const PartnersSection = () => {
               key={index}
               src={logo}
               alt="logo"
-              className="mx-6 h-24 object-contain"
+              className="mx-6 h-20 object-contain"
             />
           ))}
         </Marquee>
@@ -142,7 +142,7 @@ const PartnersSection = () => {
               key={index}
               src={logo}
               alt="logo"
-              className="mx-6 h-16 object-contain"
+              className="mx-6 h-20 object-contain mt-8"
             />
           ))}
         </Marquee>

@@ -57,6 +57,18 @@ const destinations = [
     country: 'Singapore',
   },
 ];
+const gradientBackgrounds = [
+  'radial-gradient(circle at center, #d4f0ff 20%, transparent 60%)', // Deeper blue
+  'radial-gradient(circle at center, #e9fef2 20%, transparent 60%)', // Deeper green
+  'radial-gradient(circle at center, #ffe4e4 20%, transparent 60%)', // Deeper pink
+  'radial-gradient(circle at center, #fff0d4 20%, transparent 60%)', // Deeper orange
+  'radial-gradient(circle at center, #eaeaff 30%, transparent 80%)', // Deeper violet
+  'radial-gradient(circle at center, #e4fdf7 30%, transparent 80%)', // Deeper aqua
+  'radial-gradient(circle at center, #fff1e4 30%, transparent 80%)', // Deeper cream
+  'radial-gradient(circle at center, #e5e7eb 30%, transparent 80%)', // Slightly darker gray
+];
+
+
 
 export default function FeaturesAndDestinations() {
   return (
@@ -73,19 +85,23 @@ export default function FeaturesAndDestinations() {
   
     {/* Features Section */}
     <div className="mb-16">
-      <div className="flex gap-2 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 hide-scrollbar pb-2">
-        {features.map((feature, idx) => (
-          <div
-            key={idx}
-            className="w-[220px] sm:w-auto sm:min-w-0 space-y-2 text-left flex-shrink-0"
-          >
-            <div className="text-4xl">{feature.icon}</div>
-            <h3 className="text-lg font-semibold text-black">{feature.title}</h3>
-            <p className="text-gray-600 text-sm line-clamp-3">{feature.description}</p>
-          </div>
-        ))}
+  <div className="flex gap-2 overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 hide-scrollbar pb-2">
+    {features.map((feature, idx) => (
+      <div
+        key={idx}
+        className="w-[220px] sm:w-auto sm:min-w-0 space-y-2 text-left flex-shrink-0 p-4 rounded-xl"
+        style={{
+          backgroundImage: gradientBackgrounds[idx % gradientBackgrounds.length],
+          backgroundColor: '#fff', // base white bg for contrast
+        }}
+      >
+        <div className="text-4xl">{feature.icon}</div>
+        <h3 className="text-lg font-semibold text-black">{feature.title}</h3>
+        <p className="text-gray-600 text-sm line-clamp-3">{feature.description}</p>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
   
     {/* Destinations Section */}
     <div className="flex items-center justify-between mb-6">
