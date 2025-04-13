@@ -7,6 +7,7 @@ import PartnersMarquee from './components/PartnersMarquee.jsx';
 import DownloadAppSection from './components/DownloadAppSection.jsx';
 import TrustSection from './components/TrustSection.jsx';
 import Footer from './components/Footer.jsx';
+import BottomNav from './components/BottomNav.jsx';
 export default function Hero() {
   return (
     <main>
@@ -19,6 +20,7 @@ export default function Hero() {
       <DownloadAppSection/>
       <TrustSection/>
       <Footer/>
+      <BottomNav/>
     </main>
   );
 }
