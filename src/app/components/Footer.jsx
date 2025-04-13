@@ -2,9 +2,9 @@
 export default function Footer() {
   return (
     <footer className="bg-white text-gray-700 px-6 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* Logo & Help */}
-        <div>
+        <div className="col-span-2 sm:col-span-1 md:col-span-1">
           <div className="flex items-center gap-2 mb-4">
             <img
               src="https://cdn-imgix-open.headout.com/logo/svg/Headout_logo_purps.svg?w=229.5&h=36&fm=svg&crop=faces&auto=compress%2Cformat&fit=min"
@@ -19,7 +19,7 @@ export default function Footer() {
             <li className="flex items-center gap-2">📞 Call +13478970100</li>
             <li className="flex items-center gap-2">📧 support@headout.com</li>
           </ul>
-          <div className="mt-4">
+          <div className="mt-4 hidden md:block">
             <img
               src="https://cdn-imgix-open.headout.com/headout-connect/app_download.svg?w=126&h=126&fm=svg&crop=faces&auto=compress%2Cformat&fit=min"
               alt="QR Code"
@@ -64,7 +64,7 @@ export default function Footer() {
             <li>Affiliates</li>
             <li>Creators & influencers</li>
           </ul>
-          <p className="text-sm font-semibold mt-5">WE ACCEPT</p>
+          <p className="text-sm font-semibold mt-12">WE ACCEPT</p>
           <div className="flex flex-wrap gap-3 mt-2">
             {/* VISA */}
             <svg className="h-6" viewBox="0 0 50 20" fill="currentColor">
@@ -88,7 +88,7 @@ export default function Footer() {
             </svg>
             {/* Apple Pay */}
             <svg className="h-6" viewBox="0 0 50 20">
-              <text x="0" y="15" fontSize="12" fontWeight="bold" fill="black"> Pay</text>
+              <text x="0" y="15" fontSize="12" fontWeight="bold" fill="black">Apple Pay</text>
             </svg>
             {/* Google Pay */}
             <svg className="h-6" viewBox="0 0 60 20">
@@ -104,7 +104,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t mt-10 pt-6 text-xs text-gray-500 px-4">
+      <div className="border-t mt-10 pt-6 text-xs text-gray-500 px-4 pr-16 pl-16">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p>
             © 2014–2025 Headout Inc, 82 Nassau St #60351 New York, NY 10038
