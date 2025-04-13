@@ -58,8 +58,6 @@ const destinations = [
     },
 ];
 
-
-
 const Card = ({ item }) => {
     const [imgIndex, setImgIndex] = useState(0);
 
@@ -67,49 +65,41 @@ const Card = ({ item }) => {
     const prevImg = () => setImgIndex((imgIndex - 1 + item.images.length) % item.images.length);
 
     return (
-        <div className="inline-block w-[280px] sm:w-[300px] h-[380px] mr-4">
-            {/* Image */}
-            <div className="relative w-full h-[150px] rounded-md overflow-hidden">
+        <div className="relative w-[280px] sm:w-[320px] h-[400px] bg-white rounded-lg shadow-md p-2 mx-1 sm:mx-2 flex-shrink-0">
+            <div className="relative rounded-lg overflow-hidden h-[150px] sm:h-[180px] w-full cursor-pointer shadow-sm hover:shadow-lg transition duration-300 transform hover:-translate-y-1 group">
                 <Image
                     src={item.images[imgIndex]}
                     alt={item.title}
                     layout="fill"
                     objectFit="cover"
+                    className="transition duration-300"
                 />
                 {item.images.length > 1 && (
                     <>
-                        <button onClick={prevImg} className="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded-full text-xs shadow">
+                        <button onClick={prevImg} className="absolute cursor-pointer left-2 top-1/2 -translate-y-1/2 bg-white/70 p-1 rounded-full text-sm">
                             <IoIosArrowBack />
                         </button>
-                        <button onClick={nextImg} className="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-1 rounded-full text-xs shadow">
+                        <button onClick={nextImg} className="absolute cursor-pointer right-2 top-1/2 -translate-y-1/2 bg-white/70 p-1 rounded-full text-sm">
                             <IoIosArrowForward />
                         </button>
                     </>
                 )}
-                <div className="absolute bottom-2 left-2 bg-white rounded-full text-xs font-semibold text-pink-600 px-2 py-1 flex items-center gap-1 shadow">
-                    <FaStar className="text-pink-600 text-sm" />
+                {item.tag && <span className="absolute text-black top-2 left-2 bg-white text-xs px-2 py-1 rounded-md font-semibold">{item.tag}</span>}
+            </div>
+            <div className="mt-3 px-1">
+                <p className="text-xs sm:text-sm font-medium text-gray-600">{item.location}</p>
+                <div className="flex items-center gap-1 text-pink-600 text-xs sm:text-sm font-semibold">
+                    <FaStar className="text-pink-600" />
                     {item.rating} <span className="text-gray-500 font-normal">({item.reviews.toLocaleString()})</span>
                 </div>
-            </div>
-
-            {/* Info */}
-            <div className="pt-3 h-[180px] flex flex-col justify-between">
-                <div>
-                    <p className="text-xs text-gray-600">{item.location}</p>
-                    <p className="text-sm font-semibold text-black leading-tight line-clamp-2">{item.title}</p>
-                    <div className="flex flex-wrap gap-1 mt-2">
-                        {item.instantConfirmation && (
-                            <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">Instant confirmation</span>
-                        )}
-                        {item.tag && (
-                            <span className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">{item.tag}</span>
-                        )}
+                <p className="font-semibold text-sm sm:text-base text-black leading-snug mt-1">{item.title}</p>
+                {item.instantConfirmation && (
+                    <div className="flex items-center text-xs sm:text-sm text-gray-600 mt-1">
+                        <FaBolt className="mr-1 text-gray-500" /> Instant confirmation
                     </div>
-                </div>
-                <div>
-                    <p className="text-xs text-gray-500">From</p>
-                    <p className="text-base font-bold text-black">₹{item.price.toLocaleString()} <span className="font-normal text-xs text-gray-500">/person</span></p>
-                </div>
+                )}
+                <p className="text-xs sm:text-sm text-gray-500 mt-2">from</p>
+                <p className="font-semibold text-black text-base sm:text-lg">₹{item.price.toLocaleString()}</p>
             </div>
         </div>
     );
